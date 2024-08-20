@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "741507647664",
+    "project_id": "boom-4b6d0",
+    "storage_bucket": "boom-4b6d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741507647664:android:6bcda2e3d38251bce75375",
+        "android_client_info": {
+          "package_name": "com.example.boom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4iIfVj3gYu9Fwxi0PTh1O0mq2Bh5hJc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
