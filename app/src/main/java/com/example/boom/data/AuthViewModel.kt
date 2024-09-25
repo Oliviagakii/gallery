@@ -6,11 +6,11 @@ import android.app.ProgressDialog
 import android.content.Context
 import android.widget.Toast
 import androidx.navigation.NavController
+import com.example.boom.models.User
 
 import com.example.boom.navigation.ROUT_HOME
 import com.example.boom.navigation.ROUT_LOGIN
 import com.example.boom.navigation.ROUT_SIGNUP
-import com.example.propertyplus.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 

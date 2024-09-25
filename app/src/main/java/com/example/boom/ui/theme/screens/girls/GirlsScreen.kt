@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.boom.R
+import com.example.boom.navigation.ADD_PRODUCTS_URL
 import com.example.boom.navigation.ROUT_HOME
 
 
@@ -97,7 +98,8 @@ fun GirlsScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.girl1) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp)
+                                        .clickable { ADD_PRODUCTS_URL  },
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -122,7 +124,8 @@ fun GirlsScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.g2) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp)
+                                        .clickable {  ADD_PRODUCTS_URL },
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -153,7 +156,8 @@ fun GirlsScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.g1) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp)
+                                        .clickable { ADD_PRODUCTS_URL  },
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -179,7 +183,8 @@ fun GirlsScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.girl2) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp)
+                                        .clickable {  ADD_PRODUCTS_URL },
                                     contentScale = ContentScale.Crop
 
                                 )

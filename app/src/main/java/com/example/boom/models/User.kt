@@ -1,4 +1,4 @@
-package com.example.propertyplus.models
+package com.example.boom.models
 
 class User {
     var name:String = ""

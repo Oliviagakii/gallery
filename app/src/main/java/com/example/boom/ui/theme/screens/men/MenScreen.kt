@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.boom.R
+import com.example.boom.navigation.ADD_PRODUCTS_URL
 import com.example.boom.navigation.ROUT_HOME
 
 
@@ -93,7 +94,7 @@ fun MenScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.m1) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp).clickable {  ADD_PRODUCTS_URL },
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -118,7 +119,7 @@ fun MenScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.m2) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp).clickable {  ADD_PRODUCTS_URL },
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -149,7 +150,7 @@ fun MenScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.m3) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp).clickable {  ADD_PRODUCTS_URL },
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -175,7 +176,7 @@ fun MenScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.m4) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp).clickable {  ADD_PRODUCTS_URL },
                                     contentScale = ContentScale.Crop
 
                                 )

@@ -13,6 +13,8 @@ import com.example.boom.ui.theme.screens.home.HomeScreen
 import com.example.boom.ui.theme.screens.kids.KidsScreen
 import com.example.boom.ui.theme.screens.login.LoginScreen
 import com.example.boom.ui.theme.screens.men.MenScreen
+import com.example.boom.ui.theme.screens.products.AddProductsScreen
+import com.example.boom.ui.theme.screens.products.ViewProductsScreen
 import com.example.boom.ui.theme.screens.signup.SignupScreen
 import com.example.boom.ui.theme.screens.splash.SplashScreen
 
@@ -52,6 +54,15 @@ fun AppNavHost(
         }
         composable(ROUT_MEN) {
             MenScreen(navController = navController)
+        }
+
+
+
+        composable(ADD_PRODUCTS_URL) {
+            AddProductsScreen(navController = navController)
+        }
+        composable(VIEW_PRODUCTS_URL) {
+            ViewProductsScreen(navController = navController)
         }
 
     }

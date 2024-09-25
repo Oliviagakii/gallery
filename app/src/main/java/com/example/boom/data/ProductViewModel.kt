@@ -1,4 +1,5 @@
 package com.example.boom.data
+
 import android.app.ProgressDialog
 import android.content.Context
 import android.net.Uri
@@ -6,22 +7,16 @@ import android.widget.Toast
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.navigation.NavController
-
-
-
+import com.example.boom.models.Products
+import com.example.boom.navigation.ADD_PRODUCTS_URL
 import com.example.boom.navigation.ROUT_LOGIN
-
-
-import com.example.propertyplus.models.Products
-
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
-
 class ProductViewModel(var navController: NavController, var context: Context) {
-    var authViewModel: AuthViewModel
+    var authViewModel:AuthViewModel
     var progress: ProgressDialog
     init {
         authViewModel = AuthViewModel(navController, context)
@@ -86,7 +81,12 @@ class ProductViewModel(var navController: NavController, var context: Context) {
         return products
     }
 
-
+    fun updateProduct(productId:String){
+        var ref = FirebaseDatabase.getInstance().getReference()
+            .child("Products/$productId")
+        ref.removeValue()
+        navController.navigate(ADD_PRODUCTS_URL)
+    }
 
 
     fun deleteProduct(productId:String){

@@ -3,12 +3,14 @@ package com.example.boom.ui.theme.screens.signup
 
 
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 
 
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,6 +18,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Person
 
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -50,35 +53,50 @@ import com.example.boom.data.AuthViewModel
 import com.example.boom.navigation.ROUT_LOGIN
 
 
+
 @Composable
 fun SignupScreen(navController: NavController){
     Column (
         modifier = Modifier
-            .fillMaxSize()
-            .paint(painterResource(id = R.drawable.homescreen), contentScale = ContentScale.FillBounds),
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
+
 
         ){
         Spacer(modifier = Modifier.height(90.dp))
 
+        Image(
+            painter = painterResource(id = R.drawable.homescreen) ,
+            contentDescription ="home",
+            modifier = Modifier
+                .size(150.dp),
+            contentScale = ContentScale.Crop
 
+        )
 
 
         Text(
-            text ="Sneaker Hub",
+            text ="Sneaker hub",
             fontSize = 60.sp,
             fontFamily = FontFamily.Cursive,
-            fontWeight = FontWeight.Bold,
             color = Color.Black,
         )
 
-        val name by remember { mutableStateOf("") }
+        var name by remember { mutableStateOf("") }
         var email by remember { mutableStateOf("") }
         var password by remember { mutableStateOf("") }
         var confpassword by remember { mutableStateOf("") }
 
 
+        OutlinedTextField(value = name, onValueChange = {name =it},
+            label = { Text("Enter Fullname") },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(20.dp),
+            leadingIcon ={ Icon(imageVector = Icons.Default.Person, contentDescription = "")},
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
 
+        )
 
         OutlinedTextField(value = email, onValueChange = {email =it},
             label = { Text("Enter Email") },
@@ -115,15 +133,21 @@ fun SignupScreen(navController: NavController){
 
 
         )
+
+
         val context = LocalContext.current
         val authViewModel = AuthViewModel(navController, context)
+
+
         Button(
-            onClick = {authViewModel.signup(name, email, password,confpassword) },
+            onClick = {
+                authViewModel.signup(name, email, password,confpassword)
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp)
                 .padding(start = 20.dp, end = 20.dp),
-            colors = ButtonDefaults.buttonColors(Color.White),
+            colors = ButtonDefaults.buttonColors(Color.Black),
             shape = RoundedCornerShape(10.dp)
 
 
@@ -145,15 +169,14 @@ fun SignupScreen(navController: NavController){
             onClick = { navController.navigate(ROUT_LOGIN) },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(40.dp)
+                .height(50.dp)
                 .padding(start = 20.dp, end = 20.dp),
-            colors = ButtonDefaults.buttonColors(Color.White),
+            colors = ButtonDefaults.buttonColors(Color.Black),
             shape = RoundedCornerShape(10.dp)
 
 
 
-        )
-        {
+        ) {
 
             Text(
                 text = "login",

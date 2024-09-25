@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.boom.R
+import com.example.boom.navigation.ADD_PRODUCTS_URL
 import com.example.boom.navigation.ROUT_HOME
 
 
@@ -94,7 +95,8 @@ fun KidsScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.k5) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp)
+                                        .clickable {  ADD_PRODUCTS_URL },
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -119,7 +121,8 @@ fun KidsScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.k6) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp)
+                                        .clickable {  ADD_PRODUCTS_URL },
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -150,7 +153,7 @@ fun KidsScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.k3) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp).clickable {  ADD_PRODUCTS_URL },
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -176,7 +179,7 @@ fun KidsScreen(navController: NavController){
                                     painter = painterResource(id = R.drawable.k7) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(180.dp),
+                                        .size(180.dp).clickable {  ADD_PRODUCTS_URL },
                                     contentScale = ContentScale.Crop
 
                                 )
