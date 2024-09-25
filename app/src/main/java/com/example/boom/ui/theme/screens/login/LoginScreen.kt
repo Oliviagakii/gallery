@@ -1,6 +1,6 @@
 package com.example.boom.ui.theme.screens.login
 
-import androidx.compose.foundation.Image
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
@@ -26,6 +25,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -42,29 +42,24 @@ import androidx.navigation.compose.rememberNavController
 import com.example.boom.R
 import com.example.boom.data.AuthViewModel
 
-import com.example.propertyplus.navigation.ROUT_SIGNUP
+import com.example.boom.navigation.ROUT_SIGNUP
 
 
 @Composable
 fun LoginScreen(navController: NavController){
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .paint(painterResource(id = R.drawable.c3), contentScale = ContentScale.FillBounds),
+
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Spacer(modifier = Modifier.height(10.dp))
 
-        Image(
-            painter = painterResource(id = R.drawable.home) ,
-            contentDescription ="home",
-            modifier = Modifier
-                .size(150.dp),
-            contentScale = ContentScale.Crop
-
-        )
 
         Text(
             text ="Welcome Back",
-            fontSize = 60.sp,
+            fontSize = 40.sp,
             fontFamily = FontFamily.Cursive,
             color = Color.Black,
         )

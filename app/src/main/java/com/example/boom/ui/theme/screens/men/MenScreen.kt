@@ -1,4 +1,5 @@
-package com.example.boom.ui.theme.screens.dashboard
+package com.example.boom.ui.theme.screens.men
+
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,7 +25,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -32,13 +32,10 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.boom.R
 import com.example.boom.navigation.ROUT_HOME
-import com.example.boom.ui.theme.lightblue
-
-
 
 
 @Composable
-fun DashboardScreen(navController: NavController){
+fun MenScreen(navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -47,26 +44,31 @@ fun DashboardScreen(navController: NavController){
     )
     {
         Text(
-            text ="PropertyPlus",
-            fontSize = 60.sp,
-            fontFamily = FontFamily.Cursive,
+            text ="Sneakers for men",
+            fontSize = 40.sp,
+            fontFamily = FontFamily.SansSerif,
+            color = Color.Black,
+        )
+        Text(
+            text ="Your better choice",
+            fontSize = 20.sp,
+            fontFamily = FontFamily.SansSerif,
             color = Color.Black,
         )
         Spacer(modifier = Modifier.height(30.dp))
-
         Image(
-            painter = painterResource(id = R.drawable.home) ,
+            painter = painterResource(id = R.drawable.mcover2) ,
             contentDescription ="home",
             modifier = Modifier
-                .size(150.dp),
+                .size(300.dp),
             contentScale = ContentScale.Crop
 
         )
-        Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(20.dp))
         Text(
-            text ="Manage your property with ease",
-            fontSize = 30.sp,
-            fontFamily = FontFamily.Cursive,
+            text ="Click on product to add to cart",
+            fontSize = 20.sp,
+            fontFamily = FontFamily.Serif,
             color = Color.Black,
         )
         Column {
@@ -75,7 +77,7 @@ fun DashboardScreen(navController: NavController){
                 .fillMaxWidth()
                 .height(700.dp),
                 shape = RoundedCornerShape(50.dp),
-                colors = CardDefaults.cardColors(lightblue)
+                colors = CardDefaults.cardColors(Color.White)
             ) {
                 //Row1
                 Row {
@@ -84,14 +86,14 @@ fun DashboardScreen(navController: NavController){
                         modifier = Modifier
                             .width(200.dp)
                             .height(180.dp)
-                            .padding(20.dp)) {
+                            .padding(10.dp)) {
                         Column {
                             Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.home) ,
+                                    painter = painterResource(id = R.drawable.m1) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(100.dp),
+                                        .size(180.dp),
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -99,13 +101,7 @@ fun DashboardScreen(navController: NavController){
 
                             }
                             Spacer(modifier = Modifier.height(10.dp))
-                            Text(modifier = Modifier.fillMaxWidth(),
-                                text ="Home",
-                                fontSize = 20.sp,
-                                fontFamily = FontFamily.SansSerif,
-                                color = Color.Black,
-                                textAlign = TextAlign.Center
-                            )
+
 
                         }
 
@@ -115,14 +111,14 @@ fun DashboardScreen(navController: NavController){
                         modifier = Modifier
                             .width(200.dp)
                             .height(180.dp)
-                            .padding(20.dp)) {
+                            .padding(10.dp)) {
                         Column {
                             Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.home) ,
+                                    painter = painterResource(id = R.drawable.m2) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(100.dp),
+                                        .size(180.dp),
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -130,13 +126,7 @@ fun DashboardScreen(navController: NavController){
 
                             }
                             Spacer(modifier = Modifier.height(10.dp))
-                            Text(modifier = Modifier.fillMaxWidth(),
-                                text ="Home",
-                                fontSize = 20.sp,
-                                fontFamily = FontFamily.SansSerif,
-                                color = Color.Black,
-                                textAlign = TextAlign.Center
-                            )
+
 
                         }
 
@@ -152,14 +142,14 @@ fun DashboardScreen(navController: NavController){
                         modifier = Modifier
                             .width(200.dp)
                             .height(180.dp)
-                            .padding(20.dp)) {
+                            .padding(10.dp)) {
                         Column {
                             Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.home) ,
+                                    painter = painterResource(id = R.drawable.m3) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(100.dp),
+                                        .size(180.dp),
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -167,13 +157,7 @@ fun DashboardScreen(navController: NavController){
 
                             }
                             Spacer(modifier = Modifier.height(10.dp))
-                            Text(modifier = Modifier.fillMaxWidth(),
-                                text ="Home",
-                                fontSize = 20.sp,
-                                fontFamily = FontFamily.SansSerif,
-                                color = Color.Black,
-                                textAlign = TextAlign.Center
-                            )
+
 
                         }
 
@@ -188,10 +172,10 @@ fun DashboardScreen(navController: NavController){
                         Column {
                             Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.home) ,
+                                    painter = painterResource(id = R.drawable.m4) ,
                                     contentDescription ="home",
                                     modifier = Modifier
-                                        .size(100.dp),
+                                        .size(180.dp),
                                     contentScale = ContentScale.Crop
 
                                 )
@@ -199,13 +183,7 @@ fun DashboardScreen(navController: NavController){
 
                             }
                             Spacer(modifier = Modifier.height(10.dp))
-                            Text(modifier = Modifier.fillMaxWidth(),
-                                text ="Home",
-                                fontSize = 20.sp,
-                                fontFamily = FontFamily.SansSerif,
-                                color = Color.Black,
-                                textAlign = TextAlign.Center
-                            )
+
 
                         }
 
@@ -224,9 +202,31 @@ fun DashboardScreen(navController: NavController){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 @Composable
 @Preview(showBackground = true)
-fun DashboardScreenPreview(){
-    DashboardScreen(rememberNavController())
+fun MenScreenPreview(){
+    MenScreen(rememberNavController())
 }
+
+
+

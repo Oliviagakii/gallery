@@ -1,14 +1,16 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.boom.data
 
 import android.app.ProgressDialog
 import android.content.Context
 import android.widget.Toast
 import androidx.navigation.NavController
-import androidx.navigation.NavHostController
+
+import com.example.boom.navigation.ROUT_HOME
+import com.example.boom.navigation.ROUT_LOGIN
+import com.example.boom.navigation.ROUT_SIGNUP
 import com.example.propertyplus.models.User
-import com.example.propertyplus.navigation.ROUT_HOME
-import com.example.propertyplus.navigation.ROUT_LOGIN
-import com.example.propertyplus.navigation.ROUT_SIGNUP
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -73,11 +75,6 @@ class AuthViewModel(var navController: NavController, var context: Context){
             }
 
         }
-    }
-
-    fun logout(){
-        mAuth.signOut()
-        navController.navigate(ROUT_LOGIN)
     }
 
     fun isLoggedIn(): Boolean = mAuth.currentUser != null

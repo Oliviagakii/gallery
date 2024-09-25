@@ -1,4 +1,4 @@
-package com.example.propertyplus.ui.theme.screens.about
+package com.example.boom.ui.theme.screens.about
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
